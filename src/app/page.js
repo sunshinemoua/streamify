@@ -1,6 +1,8 @@
-import Image from "next/image";
+"use client";
+import TopFiveChart from "@/components/ui/TopFiveChart";
 import { Card } from "./components/Card";
 import { data } from "./data";
+import UserGrowthChart from "@/components/ui/UserGrowthChart";
 
 export default function Home() {
   // Calculate total users
@@ -16,6 +18,14 @@ export default function Home() {
 
   // Filter items that have been streamed in the past 30 days
   const recentStreams = data.filter((item) => isDateRecent(item.dateStreamed));
+
+  // Sort the recent streams by streamCount for each song
+  recentStreams.sort((curr, prev) =>
+    curr.streamCount < prev.streamCount ? 1 : -1
+  );
+
+  // Create new array for top 5 songs by slicing from recentStreams
+  const topFiveSongs = recentStreams.slice(0, 5);
 
   // Calculate total unique userIDs from recent streams
   const activeUsers = new Set(recentStreams.map((item) => item.userID)).size;
@@ -53,12 +63,18 @@ export default function Home() {
   }, artistStreams[0]);
 
   return (
-    <div>
-      <Card title="Total Users" metric={totalUsers} />
-      <Card title="Active Users" metric={activeUsers} />
-      <Card title="Total Streams" metric={totalStreams} />
-      <Card title="Total Revenue" metric={totalRevenue} />
+    <div className="flex flex-col">
+      <div className="flex">
+        <Card title="Total Users" metric={totalUsers} />
+        <Card title="Active Users" metric={activeUsers} />
+      </div>
+      <div className="flex">
+        <Card title="Total Streams" metric={totalStreams} />
+        <Card title="Total Revenue" metric={totalRevenue} />
+      </div>
       <Card title="Top Artist" metric={topArtist.name} />
+      <UserGrowthChart />
+      <TopFiveChart topFiveSongs={topFiveSongs} />
     </div>
   );
 }
