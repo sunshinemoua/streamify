@@ -1,3 +1,471 @@
+export const USER_GROWTH_DATA = [
+  {
+    month: "September 2023",
+    activeUsers: 25000,
+    totalUsers: 28000,
+  },
+  {
+    month: "October 2023",
+    activeUsers: 26000,
+    totalUsers: 29000,
+  },
+  {
+    month: "November 2023",
+    activeUsers: 27000,
+    totalUsers: 30000,
+  },
+  {
+    month: "December 2023",
+    activeUsers: 22000,
+    totalUsers: 31000,
+  },
+  {
+    month: "January 2024",
+    activeUsers: 25000,
+    totalUsers: 28000,
+  },
+  {
+    month: "February 2024",
+    activeUsers: 26000,
+    totalUsers: 29000,
+  },
+  {
+    month: "March 2024",
+    activeUsers: 27000,
+    totalUsers: 30000,
+  },
+  {
+    month: "April 2024",
+    activeUsers: 22000,
+    totalUsers: 31000,
+  },
+];
+
+export const SONG_DATA = [
+  {
+    songName: "Midnight City",
+    artist: "M83",
+    usersThatStreamedSong: [
+      {
+        id: "1",
+        datesStreamed: [1692691200, 1693094400],
+      },
+    ],
+  },
+  {
+    songName: "Rolling in the Deep",
+    artist: "Adele",
+    usersThatStreamedSong: [
+      {
+        id: "2",
+        datesStreamed: [1693363200, 1693507200, 1693881600],
+      },
+    ],
+  },
+  {
+    songName: "Blinding Lights",
+    artist: "The Weeknd",
+    usersThatStreamedSong: [
+      {
+        id: "3",
+        datesStreamed: [1693036800, 1693459200],
+      },
+      {
+        id: "4",
+        datesStreamed: [1693584000, 1694064000, 1694428800],
+      },
+    ],
+  },
+  {
+    songName: "Watermelon Sugar",
+    artist: "Harry Styles",
+    usersThatStreamedSong: [
+      {
+        id: "5",
+        datesStreamed: [1715913600, 1692806400, 1693027200, 1693228800],
+      },
+    ],
+  },
+  {
+    songName: "Levitating",
+    artist: "Dua Lipa",
+    usersThatStreamedSong: [
+      {
+        id: "6",
+        datesStreamed: [1726608000, 1715913600, 1693507200, 1693881600],
+      },
+    ],
+  },
+  {
+    songName: "Stairway to Heaven",
+    artist: "Led Zeppelin",
+    usersThatStreamedSong: [
+      {
+        id: "3",
+        datesStreamed: [1726608000, 1677456000, 1678166400, 1726521600],
+      },
+    ],
+  },
+  {
+    songName: "Espresso",
+    artist: "Sabrina Carpenter",
+    usersThatStreamedSong: [
+      {
+        id: "6",
+        datesStreamed: [1726608000, 1726521600, 1679184000, 1681257600],
+      },
+    ],
+  },
+  {
+    songName: "Shape of You",
+    artist: "Ed Sheeran",
+    usersThatStreamedSong: [
+      {
+        id: "15",
+        datesStreamed: [1726608000, 1684032000, 1703548800],
+      },
+      {
+        id: "12",
+        datesStreamed: [1726608000, 1695696000, 1698614400, 1699152000],
+      },
+    ],
+  },
+  {
+    songName: "Blinding Lights",
+    artist: "The Weeknd",
+    usersThatStreamedSong: [
+      {
+        id: "8",
+        datesStreamed: [
+          1726608000, 1679875200, 1700438400, 1702166400, 1726521600,
+        ],
+      },
+      {
+        id: "11",
+        datesStreamed: [
+          1726608000, 1715913600, 1686009600, 1695686400, 1699315200,
+        ],
+      },
+    ],
+  },
+  {
+    songName: "Bad Habits",
+    artist: "Ed Sheeran",
+    usersThatStreamedSong: [
+      {
+        id: "11",
+        datesStreamed: [1726608000, 1692806400, 1693027200, 1693228800],
+      },
+      {
+        id: "9",
+        datesStreamed: [1726608000, 1702252800],
+      },
+    ],
+  },
+  {
+    songName: "Spotless Mind",
+    artist: "Jhene Aiko",
+    usersThatStreamedSong: [
+      {
+        id: "9",
+        datesStreamed: [1726608000, 1688774400],
+      },
+      {
+        id: "7",
+        datesStreamed: [1726608000, 1674345600, 1683936000, 1700179200],
+      },
+    ],
+  },
+  {
+    songName: "Thriller",
+    artist: "Michael Jackson",
+    usersThatStreamedSong: [
+      {
+        id: "2",
+        datesStreamed: [1726608000, 1680307200],
+      },
+    ],
+  },
+  {
+    songName: "Old Town Road",
+    artist: "Lil Nas X",
+    usersThatStreamedSong: [
+      {
+        id: "14",
+        datesStreamed: [1688515200, 1696723200, 1703030400],
+      },
+      {
+        id: "6",
+        datesStreamed: [1700438400, 1702252800],
+      },
+    ],
+  },
+  {
+    songName: "Bad Guy",
+    artist: "Billie Eilish",
+    usersThatStreamedSong: [
+      {
+        id: "8",
+        datesStreamed: [1692691200, 1701811200],
+      },
+      {
+        id: "6",
+        datesStreamed: [1696636800, 1700524800, 1702425600],
+      },
+    ],
+  },
+  {
+    songName: "Uptown Funk",
+    artist: "Mark Ronson ft. Bruno Mars",
+    usersThatStreamedSong: [
+      {
+        id: "1",
+        datesStreamed: [1693612800, 1701129600],
+      },
+      {
+        id: "9",
+        datesStreamed: [1687900800, 1694304000],
+      },
+      {
+        id: "7",
+        datesStreamed: [1692691200, 1700179200],
+      },
+    ],
+  },
+  {
+    songName: "Levitating",
+    artist: "Dua Lipa",
+    usersThatStreamedSong: [
+      {
+        id: "3",
+        datesStreamed: [1695868800, 1701302400],
+      },
+      {
+        id: "8",
+        datesStreamed: [1684800000, 1699315200],
+      },
+    ],
+  },
+  {
+    songName: "Memories",
+    artist: "Maroon 5",
+    usersThatStreamedSong: [
+      {
+        id: "6",
+        datesStreamed: [1687737600, 1691884800],
+      },
+      {
+        id: "7",
+        datesStreamed: [1695254400, 1698960000, 1700265600],
+      },
+    ],
+  },
+  {
+    songName: "Rolling in the Deep",
+    artist: "Adele",
+    usersThatStreamedSong: [
+      {
+        id: "5",
+        datesStreamed: [1688083200, 1693699200, 1698537600],
+      },
+      {
+        id: "2",
+        datesStreamed: [1715913600, 1700179200, 1701388800],
+      },
+    ],
+  },
+  {
+    songName: "Good 4 U",
+    artist: "Olivia Rodrigo",
+    usersThatStreamedSong: [
+      {
+        id: "4",
+        datesStreamed: [1684800000, 1698537600, 1699315200],
+      },
+      {
+        id: "13",
+        datesStreamed: [1700265600],
+      },
+    ],
+  },
+  {
+    songName: "Take Me to Church",
+    artist: "Hozier",
+    usersThatStreamedSong: [
+      {
+        id: "3",
+        datesStreamed: [1685577600, 1694131200, 1699315200],
+      },
+      {
+        id: "5",
+        datesStreamed: [1695686400, 1700179200],
+      },
+    ],
+  },
+  {
+    songName: "Shallow",
+    artist: "Lady Gaga & Bradley Cooper",
+    usersThatStreamedSong: [
+      {
+        id: "13",
+        datesStreamed: [1697923200, 1700697600],
+      },
+      {
+        id: "4",
+        datesStreamed: [1692691200, 1693958400, 1701561600],
+      },
+    ],
+  },
+  {
+    songName: "Cuff It",
+    artist: "Beyonce",
+    usersThatStreamedSong: [
+      {
+        id: "10",
+        datesStreamed: [1690684800, 1699315200],
+      },
+    ],
+  },
+  {
+    songName: "Sunflower",
+    artist: "Post Malone & Swae Lee",
+    usersThatStreamedSong: [
+      {
+        id: "5",
+        datesStreamed: [1687824000, 1694908800, 1696636800],
+      },
+      {
+        id: "9",
+        datesStreamed: [1698451200, 1701475200],
+      },
+    ],
+  },
+  {
+    songName: "Drivers License",
+    artist: "Olivia Rodrigo",
+    usersThatStreamedSong: [
+      {
+        id: "7",
+        datesStreamed: [1688611200, 1692403200, 1700784000],
+      },
+      {
+        id: "14",
+        datesStreamed: [1726608000, 1695686400],
+      },
+    ],
+  },
+  {
+    songName: "Peaches",
+    artist: "Justin Bieber ft. Daniel Caesar & Giveon",
+    usersThatStreamedSong: [
+      {
+        id: "6",
+        datesStreamed: [1726608000, 1693785600, 1696636800, 1701302400],
+      },
+      {
+        id: "12",
+        datesStreamed: [1726608000, 1701907200, 1703548800],
+      },
+    ],
+  },
+  {
+    songName: "Dance Monkey",
+    artist: "Tones and I",
+    usersThatStreamedSong: [
+      {
+        id: "12",
+        datesStreamed: [1726608000, 1688515200, 1694304000, 1702166400],
+      },
+      {
+        id: "5",
+        datesStreamed: [1726608000, 1698710400],
+      },
+    ],
+  },
+  {
+    songName: "Please Please Please",
+    artist: "Sabrina Carpenter",
+    usersThatStreamedSong: [
+      {
+        id: "1",
+        datesStreamed: [
+          1726608000, 1687900800, 1694390400, 1698796800, 1701033600,
+        ],
+      },
+      {
+        id: "4",
+        datesStreamed: [1726608000, 1691014400, 1693958400, 1700860800],
+      },
+    ],
+  },
+  {
+    songName: "Electric Feel",
+    artist: "MGMT",
+    usersThatStreamedSong: [
+      {
+        id: "1",
+        datesStreamed: [1726608000, 1677974400, 1683504000],
+      },
+      {
+        id: "9",
+        datesStreamed: [1726608000, 1673481600, 1678060800, 1699056000],
+      },
+      {
+        id: "7",
+        datesStreamed: [1724976000, 1692691200],
+      },
+    ],
+  },
+  {
+    songName: "Rockstar",
+    artist: "DaBaby ft. Roddy Ricch",
+    usersThatStreamedSong: [
+      {
+        id: "8",
+        datesStreamed: [1724976000, 1683504000, 1697932800],
+      },
+      {
+        id: "5",
+        datesStreamed: [1724976000, 1694131200, 1693881600, 1700697600],
+      },
+    ],
+  },
+  {
+    songName: "Bohemian Rhapsody",
+    artist: "Queen",
+    usersThatStreamedSong: [
+      {
+        id: "1",
+        datesStreamed: [1724976000, 1678233600, 1682467200, 1698451200],
+      },
+      {
+        id: "2",
+        datesStreamed: [
+          1724976000, 1682553600, 1691107200, 1695168000, 1695340800,
+        ],
+      },
+      {
+        id: "3",
+        datesStreamed: [1724976000, 1683676800, 1700697600],
+      },
+    ],
+  },
+  {
+    songName: "Senorita",
+    artist: "Shawn Mendes & Camila Cabello",
+    usersThatStreamedSong: [
+      {
+        id: "7",
+        datesStreamed: [1681344000, 1688774400, 1698105600],
+      },
+      {
+        id: "12",
+        datesStreamed: [1693008000, 1700179200],
+      },
+    ],
+  },
+];
+
 export const data = [
   {
     songName: "Electric Feel",

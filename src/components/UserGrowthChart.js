@@ -1,7 +1,7 @@
 "use client";
-import { data } from "@/app/data";
+import { data, USER_GROWTH_DATA } from "@/app/data";
 import React from "react";
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "./chart";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 const chartConfig = {
@@ -63,7 +63,7 @@ const UserGrowthChart = () => {
   return (
     <ChartContainer config={chartConfig}>
       <LineChart
-        data={growthReport}
+        data={USER_GROWTH_DATA}
         margin={{
           left: 24,
           right: 24,
@@ -74,13 +74,13 @@ const UserGrowthChart = () => {
         <YAxis />
         <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
         <Line
-          dataKey="totalUserGrowth"
+          dataKey="activeUsers"
           type="linear"
           stroke="#8884d8"
           dot={true}
         />
         <Line
-          dataKey="activeUserGrowth"
+          dataKey="totalUsers"
           type="linear"
           stroke="#8884d8"
           dot={true}
